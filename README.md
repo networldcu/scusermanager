@@ -1,39 +1,37 @@
-# SCUserManager - Samba + Carbonio User Manager
+# SCUserManager - Gestión de usuarios Samba4 + Carbonio CE
 
-**SCUserManager** es una aplicación web que permite administrar usuarios en un **dominio Samba 4 (Active Directory)** y sincronizarlos con **Zextras Carbonio CE** (servidor de correo), todo desde una interfaz amigable.
+Aplicación web para administrar usuarios en Active Directory (Samba4) y buzones de correo en Zextras Carbonio CE.
 
 ## ✨ Características
 
-- Gestión completa de usuarios (crear, editar, eliminar, habilitar/bloquear)
-- Asignación a Unidades Organizativas y Grupos
-- Creación automática de buzón de correo en Carbonio CE
+- Crear, editar, eliminar, bloquear/desbloquear usuarios
+- Asignar a Unidades Organizativas y Grupos
+- Creación automática de buzón en Carbonio CE
 - Panel de autoservicio para cambio de contraseña
-- Exportación de lista de usuarios a HTML/PDF con formato profesional
-- Filtros, búsqueda y ordenamiento por columnas
+- Exportación a HTML/PDF con filtros
 - Exclusión de usuarios no deseados
-- Totalmente configurable mediante `config.json`
+- Ordenamiento por columnas
+- Paginación y búsqueda
 
-## 🔧 Requisitos del servidor web
+## 📸 Capturas de pantalla
 
-- PHP 7.4 o superior con extensiones: `ldap`, `ssh2`
-- Servidor web Nginx o Apache
-- Acceso SSH (con autenticación por clave o contraseña) a los servidores Samba4 y Carbonio CE
+### Pantalla de inicio de sesión
+![Login](screenshots/login.png)
 
-## 📦 Instalación rápida
+### Lista de usuarios (panel de administración)
+![Lista de usuarios](screenshots/lista_de_usuarios.png)
 
-1. Copie los archivos a su servidor web.
-2. Copie `config.json.example` a `config.json` y edite con sus datos reales.
-3. Asegure los permisos de `config.json` (600).
-4. Acceda via web y comience a gestionar sus usuarios.
+### Exportación de usuarios (lista a exportar)
+![Lista de usuarios a exportar](screenshots/lista_usuarios_a_exportar.png)
 
-## 🌐 Demo y documentación
+## 🔧 Instalación
 
-Próximamente en [https://networldcu.com](https://networldcu.com)
-
-## 🧑‍💻 Desarrollado por
-
-**NETWORLD** – [https://networldcu.com](https://networldcu.com)
+Ver [INSTALL.md](INSTALL.md)
 
 ## 📄 Licencia
 
-Código abierto – uso libre con atribución.
+Código abierto.
+
+## 👨‍💻 Desarrollado por
+
+**NETWORLD** – [https://networldcu.com](https://networldcu.com)
