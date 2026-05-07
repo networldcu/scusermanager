@@ -1,0 +1,6 @@
+config.json
+*.log
+.htaccess
+.DS_Store
+*.bak
+error.log

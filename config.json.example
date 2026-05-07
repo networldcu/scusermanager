@@ -1,0 +1,62 @@
+{
+    "ldap": {
+        "host": "192.168.1.2",
+        "port": 389,
+        "use_tls": false,
+        "base_dn": "dc=example,dc=com",
+        "admin_dn": "cn=Administrator,cn=Users,dc=example,dc=com",
+        "admin_password": "Passworddeadmin",
+        "domain_admins_group": "CN=Domain Admins,CN=Users,dc=example,dc=com",
+        "users_base_ou": "dc=example,dc=com",
+        "groups_base_ou": "dc=example,dc=com"
+    },
+    "carbonio": {
+        "host": "192.168.1.4",
+        "port": 22,
+        "user": "root",
+        "password": "Passwordroot",
+        "private_key_path": "/var/www/.ssh/id_rsa",
+        "sudo_to_user": "zextras",
+        "create_account_cmd": "carbonio prov ca \"%s@example.com\" \"\"",
+        "set_givenname_cmd": "carbonio prov ma \"%s@example.com\" givenName \"%s\"",
+        "set_sn_cmd": "carbonio prov ma \"%s@example.com\" sn \"%s\"",
+        "set_displayname_cmd": "carbonio prov ma \"%s@example.com\" displayName \"%s\"",
+        "delete_account_cmd": "carbonio prov da \"%s@example.com\"",
+        "delay_seconds": 2
+    },
+    "samba_ssh": {
+        "host": "192.168.1.2",
+        "port": 22,
+        "user": "root",
+        "password": "Passwordroot",
+        "private_key_path": "/var/www/.ssh/id_rsa_samba",
+        "sudo_to_user": "root"
+    },
+    "group_filter": {
+        "include_list": [
+            "Domain Admins",
+            "Users",
+            "Administrators",
+            "Correo",
+            "Internet_Regulares",
+            "Internet_Administrativos",
+            "Internet_Nodo",
+            "Internet_Invitados"
+        ]
+    },
+    "security_ou": {
+        "name": "Seguridad"
+    },
+    "exclude_users": [
+        "krbtgt",
+        "Administrator",
+	"Guest",
+        "proxy"
+    ],
+    "app": {
+        "name": "Samba Carbonio User Manager",
+	"version": "1.2",
+        "session_lifetime": 3600,
+        "login_attempts_limit": 5
+    }
+}
